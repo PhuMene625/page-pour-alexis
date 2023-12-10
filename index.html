@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATTENTION AUX OREILLES</title>
+    <style>
+      body{
+         background-color: #1D1F22;
+      margin: 0;
+      padding: 0;
+      }
+         #time {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: blue;
+      padding: 5px;
+      font-family: sans-serif;
+      font-size: 30px;
+      color: white;
+      border-radius: 5%;
+    }
+    h1{
+      text-align: center;
+      color: aliceblue;
+    }
+
+    #date {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: blue;
+      padding: 5px;
+      font-family: sans-serif;
+      font-size: 30px;
+      color: white;
+      border-radius: 5%;
+    }
+
+    .seconds {
+      font-size: 20px;
+      color: yellow;
+    }
+      .container {
+  position: absolute;
+  top: 48%;
+  left: 34.5%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 800px;
+      }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sound {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border-color: black;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+  background-color: #292929;
+  }
+        #home-button {
+        position: absolute;
+        top: 15px;
+        right: 125px;
+        background-color: red;
+        padding: 5px;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: white;
+        border-radius: 5%;
+      }
+      
+      .sound1{
+        width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border-color: rgb(91, 75, 240);
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+  background-color: #292929;
+      }
+
+      /*#crazy{
+      
+      background-color: rgb(R, G, B);
+      }*/
+    </style>
+  </head>
+  <body>
+    <h1>Tu devrais reload la page pour arrêter les sons</h1>
+    <div id="crazy"></div>
+    <div class="container">
+     <!-- <div class="center">-->
+      <button class="sound" id="bluetooth" onClick="play_sound(this.id)">Bluetooth connected</button>
+      <button class="sound" id="cri-corbeau" onClick="play_sound(this.id)">Cri Corbeau</button>
+      <button class="sound" id="coudur" onClick="play_sound(this.id)">Coup dur pour Guillaume</button>
+      <button class="sound" id="Incident_Trafic_Normal" onClick="play_sound(this.id)">Incident Trafic Normal</button>
+        <button class="sound" id="demarrage_val" onClick="play_sound(this.id)">Val Auugh</button>
+        <button class="sound" id="CuidadoPisse"
+onclick="play_sound(this.id)">Cuicado Pisse </button>
+        <button class="sound" id="marcel-sembat"
+onclick="play_sound(this.id)">Marcel Sembat</button>
+        <button class="sound" id="MindBarbara"
+onclick="play_sound(this.id)">Mind Barbara</button>
+        <button class="sound" id="Porte_de_mon_c..._"
+onclick="play_sound(this.id)">Porte de mon cul</button>
+        <button class="sound" id="Porte-de-la-chaise-2"
+onclick="play_sound(this.id)">Porte de la chaise</button>
+        <button class="sound" id="TOP_H_10H_RDT"
+onclick="play_sound(this.id)">10H RDT </button>
+        <button class="sound" id="vibreur_m3_hillarant"
+onclick="play_sound(this.id)">Vibreur Hillarant M3</button>
+        <button class="sound" id="Windows_Hardware_Remove"
+onclick="play_sound(this.id)">Windows Hardware Remove</button>
+           <button class="sound" id="Sonneriechiante"
+onclick="play_sound(this.id)">Sonnerie Chiante</button>
+         <button class="sound" id="Vigilance" onclick="play_sound(this.id)">Vigilance</button>
+        <button class="sound" id="TramDevantmp3" onclick="play_sound(this.id)">Immobilisé pour un moment</button>
+      <button class="sound" id="airbus_stall" onclick="play_sound(this.id)">Airbus Stall</button>
+      <a href="../musique.html"><button class="sound1">Musique relaxante pour Alexis</button></a>
+   <!-- </div>-->
+    </div>
+      <div id="time"></div>
+  <div id="date"></div>
+   <a href="../index.html"  <button id="home-button">Home</button> </a>
+    </div>
+  </body>
+  <script>
+    /*function bothfunct(){
+    var audior = new Audio('assets/' + 'sound' + ".mp3");
+    console.log('Played ' + 'sound' + ".mp3")
+    audior.play();
+    }*/
+
+  
+    function play_sound(clicked_id) {
+    var audio = new Audio('assets/' + clicked_id + ".mp3");
+    console.log('Played ' + clicked_id + ".mp3")
+    audio.play();
+    }
+
+    /*function crazy() { 
+      R = null;
+      G = null;
+      B = null;
+    setInterval(gay, 100)
+    }
+
+    function gay(){
+     R = Math.floor(Math.random() * 251);
+     G = Math.floor(Math.random() * 251);
+     B = Math.floor(Math.random() * 251);
+    }*/
+
+  
+  
+</script>
+
+  <script>
+    function updateTime() {
+      var now = new Date();
+      var hours = now.getHours().toString().padStart(2, '0');
+      var minutes = now.getMinutes().toString().padStart(2, '0');
+      var seconds = now.getSeconds().toString().padStart(2, '0');
+      var timeString = hours + ':' + minutes;
+      var secondsString = '<span class="seconds">' + seconds + '</span>';
+      document.getElementById('time').innerHTML = timeString + secondsString;
+
+      var day = now.getDate().toString().padStart(2, '0');
+      var month = (now.getMonth() + 1).toString().padStart(2, '0');
+      var year = now.getFullYear();
+      var dateString = day + '/' + month + '/' + year;
+      document.getElementById('date').textContent = dateString;
+    }
+
+    setInterval(updateTime, 250);
+  </script>
+</html>

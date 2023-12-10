@@ -1,0 +1,47 @@
+body{
+    background-color: #1D1F22;
+    color: aliceblue;
+    text-align: center;
+}
+
+.title{
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+font-size: 4cm;
+color: blueviolet;
+
+}
+
+
+#time {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: blue;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    border-radius: 5%;
+  }
+
+  #date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: blue;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    border-radius: 5%;
+  }
+
+  .seconds {
+    font-size: 20px;
+    color: yellow;
+  }
+
+  #button{
+    font-size: 100px;
+    background-color: blue;
+  }

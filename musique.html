@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <link rel="stylesheet" type="text/css" href="../ProjetWeb/styles/styles.css" />
+    <head>
+        <meta name="description" content="Un cadeau pour Alexis">
+        <meta name="author" content="PhuMene">
+        <title>Musique</title>
+        <style>
+        body{
+            transition: background-color 0.00000001 ease;
+        }
+        button{
+            font-size: 1cm;
+            color:blueviolet;
+        }
+        #follow {
+  position: absolute;
+  text-align: center;
+}
+        </style>
+    </head>
+    <body>
+        <h1>ALEXIS CADEAU POUR TOIIIIIIIIIIIIII</h1>
+        <button onclick="clicked_button();"> Cliques-moi UwU <br> Fais gaffe à tes yeux par contre </button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="follow"><img id="alex" src="../ProjetWeb/alexis.jpeg" /><br>Alexis Belmonte</br>
+</div>
+
+
+    </body>
+   <script>
+    function clicked_button() {
+        console.log("OK 1");
+  setInterval(changeColor, 0.0000001);
+        console.log("OK 2");
+  var audio = new Audio("soundboard/assets/sound.mp3");
+    console.log("sus amogus");
+    audio.play();
+    $(document).mousemove(function(e) {
+  $("#follow").css({
+    left: e.pageX - 112,
+    top: e.pageY - 112
+  });
+});
+}
+
+    
+   
+function changeColor() {
+    
+    const randomColor = () => Math.floor(Math.random() * 256);
+
+    const newColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+    
+    document.body.style.backgroundColor = newColor;
+  }
+
+  
+
+  </script>
+</html>
